@@ -1,0 +1,21 @@
+body{
+  background-color: purple;
+
+}
+
+h1{
+  text-align: center;
+}
+
+.current-time{
+  color: white;
+  margin-top: 200px;
+  font-size: 150px;
+
+}
+
+.current-time .hours::after, .current-time .minutes::after{
+    content: ":";
+    padding-left: 40px;
+
+}
