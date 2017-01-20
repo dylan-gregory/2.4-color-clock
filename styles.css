@@ -1,8 +1,6 @@
 body{
   background-color: purple;
-
 }
-
 h1{
   text-align: center;
 }
@@ -29,4 +27,10 @@ h1{
 #seconds::before{
   content: ":";
   margin-right: 20px;
+}
+
+#status-bar{
+  background-color: white;
+  height: 5px;
+
 }
