@@ -1,39 +1,24 @@
 (function(){
     "use strict";
 
-  var hours = document.querySelector('.current-time .hours');
-  var minutes = document.querySelector('.current-time .minutes');
-  var seconds = document.querySelector('.current-time .seconds');
-  var nowTime = new Date();
-
-  var nowHour = now.getHours();
-  var nowMinute = now.getMinutes();
-  var nowSecond = now.getSeconds();
-
-  // var everySecond = setInterval(function() {
-  //       document.querySelector('.seconds').textContent = Date.now();
-  //     }, 36000);
 
 
+  function checkTime(){
+    var nowTime = new Date();
+    var nowHour = nowTime.getHours();
+    var nowMinute = nowTime.getMinutes();
+    var nowSecond = nowTime.getSeconds();
 
-// function tickingTime(nowTime){
-//   hours.textContent = interval[0];
-//   minutes.textContent = interval[1];
-//   seconds.textContent = interval[2];
-//
-//   printToScreen(tickingTime);
-//   return tickingTime;
-// }
-//
-//
-//
 
-function checkTime(){
-        window.setInterval((nowSecond), 1000);
-        
+  document.getElementById('hours').innerHTML = ("0" + nowHour).slice(-2);
+  document.getElementById('minutes').innerHTML = ("0" + nowMinute).slice(-2);
+  document.getElementById('seconds').innerHTML = ("0" + nowSecond).slice(-2);
 
-    }
+
+  window.setInterval(checkTime, 1000);
+}
+
 checkTime();
-//
+
 
 }());

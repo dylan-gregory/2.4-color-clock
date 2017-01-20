@@ -19,3 +19,14 @@ h1{
     padding-left: 40px;
 
 }
+
+#minutes::before{
+  content: ":";
+  margin-right: 20px;
+
+}
+
+#seconds::before{
+  content: ":";
+  margin-right: 20px;
+}
