@@ -1,5 +1,6 @@
 body{
   background-color: purple;
+  font-family: helvetica;
 }
 h1{
   text-align: center;
@@ -20,17 +21,35 @@ h1{
 
 #minutes::before{
   content: ":";
-  margin-right: 20px;
+  margin-right: 35px;
 
 }
 
 #seconds::before{
   content: ":";
-  margin-right: 20px;
+  margin-right: 35px;
 }
 
 #status-bar{
+  display: inline-block;
   background-color: white;
   height: 5px;
+}
 
+#status-bar2{
+  display: inline-block;
+  background-color: white;
+  height: 5px;
+}
+
+.mirror1{
+  position: absolute;
+  right: 640px;
+  bottom: 250px;
+}
+
+.mirror2{
+  position: absolute;
+  left: 640px;
+  bottom: 250px;
 }
