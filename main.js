@@ -47,8 +47,8 @@
 
     if (isHovering) {
     /*use colorCode(hours, minutes seconds from bottom) */
-      document.getElementById('hours').innerHTML = nowHour.toString(16);
-      document.getElementById('minutes').innerHTML = nowMinute.toString(16);
+      document.getElementById('hours').innerHTML = ("0" + nowHour.toString(16)).slice(-2);
+      document.getElementById('minutes').innerHTML = ("0" + nowMinute.toString(16)).slice(-2);
       document.getElementById('seconds').innerHTML = ("0" + nowSecond.toString(16)).slice(-2);
 
     }else {
