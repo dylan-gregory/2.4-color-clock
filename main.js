@@ -30,18 +30,26 @@
     //   nowHour =
     // }
 
-    document.querySelector('.bg').style.backgroundColor = '#' + '0123' + nowSecond;
+    document.querySelector('.bg').style.backgroundColor = ('#' + nowHour + nowMinute + nowSecond).toString(16);
 
 
     document.getElementById('status-bar').style.width = progress + "%";
     document.getElementById('status-bar2').style.width = progress + "%";
 
 
+    // function colorCode(nowHour, nowMinute, nowSecond){
+    //   nowHour = nowHour.toString(16);
+    //   nowMinute = nowHour.toString(16);
+    //   nowSecond = nowSecond.toString(16);
+    //
+    //   return [nowHour, nowMinute, nowSecond];
+    // }
+
     if (isHovering) {
     /*use colorCode(hours, minutes seconds from bottom) */
-      document.getElementById('hours').innerHTML = "01";
-      document.getElementById('minutes').innerHTML = '23';
-      document.getElementById('seconds').innerHTML = ("0" + nowSecond).slice(-2);
+      document.getElementById('hours').innerHTML = nowHour.toString(16);
+      document.getElementById('minutes').innerHTML = nowMinute.toString(16);
+      document.getElementById('seconds').innerHTML = ("0" + nowSecond.toString(16)).slice(-2);
 
     }else {
       document.getElementById('hours').innerHTML = ("0" + nowHour).slice(-2);
@@ -50,6 +58,10 @@
     }
 
 }
+
+
+
+
 
 function handleMouseOut(){
   isHovering = false;
@@ -72,10 +84,8 @@ function colorDisplay(){
 clockFace.addEventListener('mouseover', colorDisplay);
 clockFace.addEventListener('mouseout', handleMouseOut);
 
-
-
 checkTime();
-window.setInterval(checkTime, 20);
+window.setInterval(checkTime, 50);
 
 
 
