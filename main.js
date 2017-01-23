@@ -75,7 +75,7 @@ clockFace.addEventListener('mouseout', handleMouseOut);
 
 
 checkTime();
-window.setInterval(checkTime, 1000);
+window.setInterval(checkTime, 20);
 
 
 
