@@ -21,23 +21,38 @@
     //  if(nowSecond > 30) {
     //    document.querySelector('.bg').style.backgroundColor = '#98C3A1';
     //  }
+
     document.querySelector('.bg').style.backgroundColor = '#' + '0123' + nowSecond;
 
 
-  document.getElementById('status-bar').style.width = progress + "%";
-  document.getElementById('status-bar2').style.width = progress + "%";
+    document.getElementById('status-bar').style.width = progress + "%";
+    document.getElementById('status-bar2').style.width = progress + "%";
 
 
 }
 
 
 function colorDisplay(){
+  var nowTime = new Date();
+  var nowSecond = nowTime.getSeconds();
+
   document.getElementById('hours').innerHTML = "01";
   document.getElementById('minutes').innerHTML = '23';
-  document.getElementById('seconds').innerHTML = nowSecond;
+  document.getElementById('seconds').innerHTML = ("0" + nowSecond).slice(-2);
+
 
 }
 
+if (document.querySelector(".current-time").addEventListener('mouseenter', colorDisplay)) {
+  document.getElementById('hours').innerHTML = "01";
+  document.getElementById('minutes').innerHTML = '23';
+  document.getElementById('seconds').innerHTML = ("0" + nowSecond).slice(-2);
+}
+
+
+// while (document.querySelector(".current-time").addEventListener('mouseover', colorDisplay)) {
+//   clearInterval(checkTime);
+// }
 
 
 checkTime();
